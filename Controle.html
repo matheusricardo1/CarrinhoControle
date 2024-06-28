@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle do Carrinho</title>
+    <style>
+        .toggle-button {
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            position: relative;
+        }
+
+        .toggle-button input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+    <script>
+        const commandStop = 'S'
+        let invertControls = false;
+        let activeKeys = {};
+
+        const controls = {
+            'W': 'R', 
+            'S': 'L',
+            'A': invertControls ? 'B' : 'F', 
+            'D': invertControls ? 'F' : 'B',
+        };
+
+        document.addEventListener('keydown', function(event) {
+            const key = event.key.toUpperCase();
+            
+            if (controls[key] && !activeKeys[key]) {
+                activeKeys[key] = true;
+                if (key == 'S' && activeKeys[key]){
+                    toggleInvertControls()
+                }
+                sendCommand(controls[key]);
+            }
+        });
+
+        document.addEventListener('keyup', function(event) {
+            const key = event.key.toUpperCase();
+
+            if (controls[key]) {
+                if (key == 'S' && activeKeys[key]){
+                    toggleInvertControls()
+                }
+                activeKeys[key] = false;
+                sendCommand(commandStop);
+            }
+        });
+
+        function sendCommand(command) {
+            fetch(`http://192.168.4.1/?State=${command}`)
+                .then(response => response.text())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function toggleInvertControls() {
+            invertControls = !invertControls;
+            document.getElementById('invertStatus').innerText = invertControls ? 'ON' : 'OFF';
+            controls['A'] = invertControls ? 'B' : 'F';
+            controls['D'] = invertControls ? 'F' : 'B';
+        }
+    </script>
+</head>
+<body>
+    <h1>Controle do Carrinho com Teclas WASD e Botões</h1>
+    <p>Use as teclas <strong>W</strong>, <strong>A</strong>, <strong>S</strong>, <strong>D</strong> para controlar o carrinho ou clique nos botões abaixo:</p>
+    
+    <button onmousedown="sendCommand('R')" onmouseup="sendCommand('S')">Forward (W)</button>
+    <button onmousedown="sendCommand(invertControls ? 'B' : 'F')" onmouseup="sendCommand('S')">Left (A)</button>
+    <button onmousedown="sendCommand('L')" onmouseup="sendCommand('S')">Backward (S)</button>
+    <button onmousedown="sendCommand(invertControls ? 'F' : 'B')" onmouseup="sendCommand('S')">Right (D)</button>
+    <button onclick="sendCommand('S')">Stop</button>
+
+    <br><br>
+    <label class="toggle-button">
+        <input type="checkbox" onchange="toggleInvertControls()">
+        <span class="slider"></span>
+    </label>
+    <span>Inverter Controles Esquerda/Direita: <span id="invertStatus">OFF</span></span>
+</body>
+</html>
