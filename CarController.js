@@ -5,11 +5,16 @@ export class CarController {
         this.gatewayIP = gatewayIP;
     }
 
-    sendCommand(command) {
+    send(command, key='') {
+        key = key.toUpperCase()
+        console.log(key ? 'Digitou ' + key + ', seu comando é ' + command: 'Seu comando é ' + command)
+        //console.log('Digitou ' + key + ', seu comando é ' + command)
+        /*
         fetch(`http://${this.gatewayIP}/?State=${command}`)
             .then(response => response.text())
             .then(data => console.log(data))
             .catch(error => console.error('Error:', error));
+        */
     };
     invertCheckCheckbox() {
         const checkbox = document.querySelector('input[type="checkbox"]');
@@ -21,7 +26,4 @@ export class CarController {
         document.getElementById('invertStatus').innerText = this.invertControls ? 'ON' : 'OFF';
     };
 
-    setInvertControls(invertControls){
-        this.invertControls = invertControls;
-    }
 };
