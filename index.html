@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle do Carrinho</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <h1>Controle do Carrinho com Teclas WASD e Botões</h1>
+    <p>Use as teclas <strong>W</strong>, <strong>A</strong>, <strong>S</strong>, <strong>D</strong> para controlar o carrinho ou clique nos botões abaixo:</p>
+    
+    <button onmousedown="car.sendCommand(command.forward)" onmouseup="car.sendCommand('S')">Forward (W)</button>
+    <button onmousedown="car.sendCommand(command.left)" onmouseup="car.sendCommand('S')">Left (A)</button>
+    <button onmousedown="car.sendCommand(command.backward)" onmouseup="car.sendCommand('S')">Backward (S)</button>
+    <button onmousedown="car.sendCommand(command.right)" onmouseup="car.sendCommand('S')">Right (D)</button>
+    <button onclick="car.sendCommand(command.stopCar)">Stop</button>
+
+    <br><br>
+    <label class="toggle-button">
+        <input type="checkbox" onchange="car.toggleInvertControls()">
+        <span class="slider"></span>
+    </label>
+    <span>Inverter Controles Esquerda/Direita: <span id="invertStatus">OFF</span></span>
+
+   
+</body>
+<script type="module" src="keyspress.js"></script>
+</html>
