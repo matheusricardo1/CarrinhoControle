@@ -51,41 +51,6 @@
 
         </div>
     </div>
-    <button 
-        onmousedown="holdCommand(command.Forward)"
-        onmouseup="releaseCommand(command.Forward)"
-        >
-        Forward (W)
-    </button>
-    <button
-        onmousedown="holdCommand(command.Left)"
-        onmouseup="releaseCommand(command.Left)"
-        >      
-        Left (A)
-    </button>
-    <button
-        onmousedown="holdCommand(command.Backward)"
-        onmouseup="releaseCommand(command.Backward)">
-        Backward (S)
-    </button>
-    <button
-        onmousedown="holdCommand(command.Right)"
-        onmouseup="releaseCommand(command.Right)">
-        Right (D)
-    </button>
-    <button
-        onmousedown="holdCommand(command.Stop)"
-        onmouseup="releaseCommand(command.Stop)">   
-        Stop
-    </button>
-
-    <br><br>
-    <label class="toggle-button">
-        <input type="checkbox" onchange="car.toggleInvertControls(false)">
-        <span class="slider"></span>
-    </label>
-    <span>Inverter Controles Esquerda/Direita: <span id="invertStatus">OFF</span></span>
 </body>
 <script type="module" src="core/setup.js"></script>
-
 </html>
