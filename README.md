@@ -30,10 +30,10 @@ Após a definição de cada parametro e sua respectiva ação nos motores do car
 ## Resultados
 
 - Site Controle V1 Vídeo Teste
-- ![CarrinhoTeste](https://github.com/user-attachments/assets/331ffacd-ca54-4cbe-933b-46b066dc3088)
+![CarrinhoTeste](https://github.com/user-attachments/assets/331ffacd-ca54-4cbe-933b-46b066dc3088)
 
 - Site Controle V2 Vídeo Teste 1
-- ![CarrinhoTeste1](https://github.com/user-attachments/assets/d57c4a25-7b73-4873-862c-37e1379e55d7)
+ ![CarrinhoTeste1](https://github.com/user-attachments/assets/d57c4a25-7b73-4873-862c-37e1379e55d7)
 
 - Site Controle V2 Vídeo Teste 2
-- ![CarrinhoTeste2](https://github.com/user-attachments/assets/4c7b76a1-6155-45b4-9828-4e1321db3ea4)
+![CarrinhoTeste2](https://github.com/user-attachments/assets/4c7b76a1-6155-45b4-9828-4e1321db3ea4)
