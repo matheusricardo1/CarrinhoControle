@@ -11,7 +11,7 @@
 ### Lógica do carrinho _(Definida pela RobotMakers)_
 - O carrinho possui o Esp8266 como módulo de controle, que permite a gestão de redes Wi-Fi.
 - No carrinho configura-se uma rede Wi-Fi e um servidor web, fazendo com que dispositos possam se conectar a rede Wi-fi do carrinho.
-- Os dispositivos conectados a rede Wi-Fi do carrinho também tem acesso ao servidor web, encontrado na via "http://gateway_padrão_do_wifi_carrinho/".
+- Os dispositivos conectados a rede Wi-Fi do carrinho também tem acesso ao servidor web, encontrado na via `http://gateway_padrão_do_wifi_carrinho/`.
 - No carrinho configura-se o recebimento de parâmetros via query strings, para que com base no parâmetro, o carrinho pode tome decisões. 
 - Após a definição de cada parametro e sua respectiva ação nos motores do carrinho, agora pode-se usar o site carrinho controle para controlar o carrinho via requisições com parâmetros.
 
@@ -26,7 +26,7 @@
 | D      | Direita  |
 
 - Para o controle funcionar, deve-se conectar o dispositivo na mesma rede Wi-Fi do carrinho.
-- Quando os comando são acionados, o servidor envia uma request para o carrinho, a request tem esse formato: "http://gateway_padrão_do_wifi_carrinho/?State=${comando}".
+- Quando os comando são acionados, o servidor envia uma request para o carrinho, a request tem esse formato: `http://gateway_padrão_do_wifi_carrinho/?State=${comando}`.
 
 ## Resultados
 
