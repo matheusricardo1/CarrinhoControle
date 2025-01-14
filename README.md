@@ -7,6 +7,7 @@ Utilizava-se um aplicativo de celular cujo a experiencia de uso não era boa.
 Foi pensando nisso que eu desenvolvi este site, que funciona como um controle remoto, que envia dados para o carrinho.
 
 **Como funciona?**
+
 *Lógica do carrinho **(Definida pela RobotMakers)***
 O carrinho possui o Esp8266 como módulo de controle, que permite a gestão de redes Wi-Fi.
 No carrinho configura-se uma rede Wi-Fi e um servidor web, fazendo com que dispositos possam se conectar a rede Wi-fi do carrinho.
@@ -20,8 +21,11 @@ Para o controle funcionar, deve-se conectar o dispositivo na mesma rede Wi-Fi do
 Quando os comando são acionados, o servidor envia uma request para o carrinho, a request tem esse formato: "http://gateway_padrão_do_wifi_carrinho/?State=${comando}".
 
 **Resultados**
+**Site Controle V1 Vídeo Teste**
 ![CarrinhoTeste](https://github.com/user-attachments/assets/331ffacd-ca54-4cbe-933b-46b066dc3088)
 
+**Site Controle V2 Vídeo Teste 1**
 ![CarrinhoTeste1](https://github.com/user-attachments/assets/d57c4a25-7b73-4873-862c-37e1379e55d7)
 
+**Site Controle V2 Vídeo Teste 2**
 ![CarrinhoTeste2](https://github.com/user-attachments/assets/4c7b76a1-6155-45b4-9828-4e1321db3ea4)
