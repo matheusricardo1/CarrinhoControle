@@ -8,7 +8,7 @@
 
 ## Como funciona?
 
-### Lógica do carrinho _(Definida pela RobotMakers)_
+### Lógica do carrinho _([Definido pela RobotMakers - Link do Código](https://github.com/Warleysonjw/Robot-MakerModelo01))_
 - O carrinho possui o Esp8266 como módulo de controle, que permite a gestão de redes Wi-Fi.
 - No carrinho configura-se uma rede Wi-Fi e um servidor web, fazendo com que dispositos possam se conectar a rede Wi-fi do carrinho.
 - Os dispositivos conectados a rede Wi-Fi do carrinho também tem acesso ao servidor web, encontrado na via `http://gateway_padrão_do_wifi_carrinho/`.
