@@ -3,8 +3,8 @@ Desenvolvimento de um site com o objetivo de ser um controle remoto para um carr
 Carrinho cedido pela equipe de robótica, RobotMakers de Manacapuru-AM. 
 
 ## Por que foi desenvolvido?
-\ Utilizava-se um aplicativo de celular cujo a experiencia de uso não era boa.
-\ Foi pensando nisso que eu desenvolvi este site, que funciona como um controle remoto, que envia dados para o carrinho.
+Utilizava-se um aplicativo de celular cujo a experiencia de uso não era boa.
+Foi pensando nisso que eu desenvolvi este site, que funciona como um controle remoto, que envia dados para o carrinho.
 
 ## Como funciona?
 
@@ -16,7 +16,7 @@ No carrinho configura-se o recebimento de parâmetros via query strings, para qu
 Após a definição de cada parametro e sua respectiva ação nos motores do carrinho, agora pode-se usar o site carrinho controle para controlar o carrinho via requisições com parâmetros.
 
 ### Lógica do site
-\ O site foi pré-definido para funcionar somente usando o teclado, com os principais comandos:
+O site foi pré-definido para funcionar somente usando o teclado, com os principais comandos:
 
 | Teclas | Comandos | 
 |--------|----------|
@@ -25,8 +25,8 @@ Após a definição de cada parametro e sua respectiva ação nos motores do car
 | A      | Esquerda | 
 | D      | Direita  |
 
-\ Para o controle funcionar, deve-se conectar o dispositivo na mesma rede Wi-Fi do carrinho.
-\ Quando os comando são acionados, o servidor envia uma request para o carrinho, a request tem esse formato: "http://gateway_padrão_do_wifi_carrinho/?State=${comando}".
+Para o controle funcionar, deve-se conectar o dispositivo na mesma rede Wi-Fi do carrinho.
+Quando os comando são acionados, o servidor envia uma request para o carrinho, a request tem esse formato: "http://gateway_padrão_do_wifi_carrinho/?State=${comando}".
 
 ## Resultados
 
